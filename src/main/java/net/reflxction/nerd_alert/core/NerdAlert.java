@@ -28,7 +28,7 @@ import java.io.File;
 
 /**
  * ReflxctionDev presents: The most useless mod founded on earth, and let me honest I have no idea why do I spend my time doing such things
- *
+ * <p>
  * Sponsored by: The Impurity Hypixel Guild
  */
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
