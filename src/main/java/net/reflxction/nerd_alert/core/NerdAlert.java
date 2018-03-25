@@ -26,11 +26,18 @@ import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 
 import java.io.File;
 
+/**
+ * ReflxctionDev presents: The most useless mod founded on earth, and let me honest I have no idea why do I spend my time doing such things
+ *
+ * Sponsored by: The Impurity Hypixel Guild
+ */
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class NerdAlert {
 
+    // Config to save data
     private Configuration config;
 
+    // boolean value if the mod is enabled
     private static boolean isEnabled;
 
     /**
@@ -39,7 +46,7 @@ public class NerdAlert {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         config = new Configuration(new File("config/nerd-alert.cfg"));
-        isEnabled = config.get("Enabled", "Enabled", true).getBoolean();
+        isEnabled = getConfig().get("Enabled", "Enabled", true).getBoolean();
     }
 
     /**
@@ -58,8 +65,22 @@ public class NerdAlert {
 
     }
 
-    public Configuration getConfig() {
+    /**
+     * Config of the mod
+     *
+     * @return Config of the mod
+     */
+    private Configuration getConfig() {
         return config;
+    }
+
+    /**
+     * If the mod is enabled
+     *
+     * @return boolean if the mod is enabled
+     */
+    public static boolean isEnabled() {
+        return isEnabled;
     }
 
 }
