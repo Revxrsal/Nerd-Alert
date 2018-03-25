@@ -38,7 +38,7 @@ public class NerdAlert {
      */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        config = new Configuration(new File("config/skaia-presence.cfg"));
+        config = new Configuration(new File("config/nerd-alert.cfg"));
         isEnabled = config.get("Enabled", "Enabled", true).getBoolean();
     }
 
