@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-package net.reflxction.nerd_alert.core;
+package net.reflxction.nerd_alert.utils;
 
-class Reference {
+/**
+ * Mod information
+ */
+public class Reference {
 
-    static final String MOD_ID = "nerd_alert";
-    static final String NAME = "Nerd Alert";
-    static final String VERSION = "1.0";
-    static final String ACCEPTED_VERSIONS = "[1.8.9]";
+    public static final String MOD_ID = "nerd_alert";
+    public static final String NAME = "Nerd Alert";
+    public static final String VERSION = "1.0";
+    public static final String ACCEPTED_VERSIONS = "[1.8.9]";
+    public static final String PREFIX = ChatColor.translateAlternateColorCodes("&e[&2Nerd Alert&e] ");
 
 }
