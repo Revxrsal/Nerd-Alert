@@ -24,6 +24,7 @@ import net.reflxction.nerd_alert.core.NerdAlert;
 import net.reflxction.nerd_alert.utils.NerdUtils;
 import net.reflxction.nerd_alert.utils.Player;
 import net.reflxction.nerd_alert.utils.Reference;
+import net.reflxction.nerd_alert.utils.ThreadTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,8 @@ import java.util.List;
 public class MainCommand implements ICommand {
 
     private Player p = new Player();
+
+    private final ThreadTask task = new ThreadTask();
 
     @Override
     public String getCommandName() {
@@ -78,6 +81,9 @@ public class MainCommand implements ICommand {
                     } else {
                         p.sendMessage("&cNone! Nerdify some with &e/nerds add <name>");
                     }
+                }
+                if(args[0].equalsIgnoreCase("test")) {
+                    task.run();
                 }
                 break;
             case 2:

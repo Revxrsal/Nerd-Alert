@@ -44,7 +44,6 @@ public class NerdUtils {
         String[] array = nerdsString.split(" ");
         List<String> nerds = new ArrayList<String>();
         Collections.addAll(nerds, array);
-        DebugUtils.debug(nerds + " <- nerds array");
         return nerds;
     }
 
@@ -60,7 +59,6 @@ public class NerdUtils {
             NerdAlert.getConfig().get("Nerds", "Nerds", "").set(sb.toString() + " " + nerd);
         }
         getNerds().add(nerd);
-        DebugUtils.debug(getNerds() + " <- new nerds array");
         NerdAlert.getConfig().save();
     }
 
