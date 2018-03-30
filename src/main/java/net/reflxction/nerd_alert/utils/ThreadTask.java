@@ -49,15 +49,40 @@ public class ThreadTask extends TimerTask {
                                             @Override
                                             public void run() {
                                                 setShouldStart(false);
+                                                new Timer().schedule(new TimerTask() {
+                                                    @Override
+                                                    public void run() {
+                                                        setShouldStart(true);
+                                                        new Timer().schedule(new TimerTask() {
+                                                            @Override
+                                                            public void run() {
+                                                                setShouldStart(false);
+                                                                new Timer().schedule(new TimerTask() {
+                                                                    @Override
+                                                                    public void run() {
+                                                                        setShouldStart(true);
+                                                                        new Timer().schedule(new TimerTask() {
+                                                                            @Override
+                                                                            public void run() {
+                                                                                setShouldStart(false);
+
+                                                                            }
+                                                                        }, 1500);
+                                                                    }
+                                                                }, 1500);
+                                                            }
+                                                        }, 1500);
+                                                    }
+                                                }, 1500);
                                             }
-                                        }, 1000);
+                                        }, 1500);
                                     }
-                                }, 100);
+                                }, 1500);
                             }
-                        }, 1000);
+                        }, 1500);
                     }
-                }, 100);
+                }, 1500);
             }
-        }, 1000);
+        }, 1500);
     }
 }

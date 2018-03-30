@@ -56,7 +56,7 @@ public class RenderListener {
         // Append the texture
         Minecraft.getMinecraft().getTextureManager().bindTexture(alert);
         // Render the texture
-        Minecraft.getMinecraft().ingameGUI.drawTexturedModalRect(NerdAlert.getX(), NerdAlert.getY(), 0, 0, 600, 300);
+        Minecraft.getMinecraft().ingameGUI.drawTexturedModalRect(NerdAlert.getX(), NerdAlert.getY(), 0, 0, 256, 256);
         // Disable Alpha, Matrix and Blend
         GlStateManager.disableAlpha();
         GlStateManager.disableBlend();
